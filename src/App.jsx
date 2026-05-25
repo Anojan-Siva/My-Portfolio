@@ -375,7 +375,6 @@ export default function App() {
           onClick={(e) => { if (e.target === e.currentTarget) closeModal() }}
         >
           <div className="dialog-panel">
-            {/* Header */}
             <div className="dialog-header">
               <span className="dialog-tag">
                 {activeModal.modalTitle}
