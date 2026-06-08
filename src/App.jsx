@@ -12,15 +12,6 @@ const caseStudies = [
     link: 'https://service-site-lilac.vercel.app',
   },
   {
-    id: 'cs1',
-    tag: 'Design 1 · Service Site',
-    title: 'Bright Smile Dental Clinic',
-    description:
-      'A modern service website for a dental clinic — featuring appointment booking, staff profiles, and a clean, trust-building layout.',
-    icon: '🦷',
-    modalTitle: 'Service Site Design',
-  },
-  {
     id: 'cs2',
     tag: 'Design 2 · Memory Game',
     title: 'Jeu de Mémoire',
@@ -353,7 +344,7 @@ export default function App() {
                   <div className="case-num">Project {(idx + 1).toString().padStart(2, '0')}</div>
                   <h3 className="case-title">{study.title}</h3>
                   <p className="case-desc">{study.description}</p>
-                  <span className="case-status">Coming Soon</span>
+                  {!study.link && <span className="case-status">Coming Soon</span>}
                   <span className="case-arrow" aria-hidden="true">→</span>
                 </div>
               </button>
