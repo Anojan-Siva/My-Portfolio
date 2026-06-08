@@ -2,6 +2,16 @@ import { useState, useEffect } from 'react'
 
 const caseStudies = [
   {
+    id: 'cs0',
+    tag: 'Real Project · Service Site',
+    title: 'Meridian Watch Co.',
+    description:
+      'A professional watch repair service website for Meridian Watch Co. — featuring service offerings, expertise showcase, and customer engagement optimized for a specialized service business.',
+    icon: '⌚',
+    modalTitle: 'Watch Repair Service Site',
+    link: 'https://service-site-lilac.vercel.app',
+  },
+  {
     id: 'cs1',
     tag: 'Design 1 · Service Site',
     title: 'Bright Smile Dental Clinic',
@@ -320,8 +330,7 @@ export default function App() {
             <span className="section-label">Portfolio</span>
             <h2 className="section-title">Case Studies</h2>
             <p className="section-desc">
-              Four design projects I'll be building throughout the semester. Each one
-              explores a different domain and design challenge.
+              Real projects and design explorations showcasing my approach to creating effective digital experiences.
             </p>
           </div>
 
@@ -389,11 +398,15 @@ export default function App() {
             </div>
             <div className="dialog-body">
               <h2 id="modal-title" className="dialog-title">
-                Coming Soon
+                {activeModal.link ? activeModal.title : 'Coming Soon'}
               </h2>
               <p>
-                This project is in progress as part of my UI Design course. Check
-                back soon to see the full case study for <strong>{activeModal.title}</strong>!
+                {activeModal.link
+                  ? `Explore the live project to see how this service site was designed and built.`
+                  : `This project is in progress as part of my UI Design course. Check
+                back soon to see the full case study for `}
+                {!activeModal.link && <strong>{activeModal.title}</strong>}
+                {!activeModal.link && '!'}
               </p>
 
               <div className="dialog-desc-block">
@@ -403,9 +416,21 @@ export default function App() {
               </div>
             </div>
             <div className="dialog-footer">
-              <button onClick={closeModal} className="btn-primary-custom">
-                Got it — I'll check back soon!
-              </button>
+              {activeModal.link ? (
+                <a
+                  href={activeModal.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary-custom"
+                  style={{ display: 'inline-block', textDecoration: 'none', textAlign: 'center' }}
+                >
+                  View Live Project →
+                </a>
+              ) : (
+                <button onClick={closeModal} className="btn-primary-custom">
+                  Got it — I'll check back soon!
+                </button>
+              )}
             </div>
           </div>
         </div>
