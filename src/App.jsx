@@ -13,12 +13,13 @@ const caseStudies = [
   },
   {
     id: 'cs2',
-    tag: 'Design 2 · Memory Game',
-    title: 'Jeu de Mémoire',
+    tag: 'Real Project · Memory Game',
+    title: 'Aspirations 3',
     description:
-      'An interactive memory card game — exploring playful UI patterns, interaction states, scoring systems, and accessible game mechanics.',
-    icon: '🎴',
-    modalTitle: 'Memory Game Design',
+      'A memorize the path and then follow the path game — exploring playful UI patterns, interaction states, scoring systems, and accessible game mechanics.',
+    icon: '🎮',
+    modalTitle: 'Memory Game Project',
+    link: 'https://memory-game-livid-five-36.vercel.app',
   },
   {
     id: 'cs3',
