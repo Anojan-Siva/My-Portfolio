@@ -23,12 +23,13 @@ const caseStudies = [
   },
   {
     id: 'cs3',
-    tag: 'Design 3 · E-Commerce',
-    title: 'Luxe Boutique Store',
+    tag: 'Real Project · E-Commerce',
+    title: 'EZGames',
     description:
-      'A premium e-commerce experience — with product listings, filtering, cart flows, and a checkout process optimized for conversion.',
-    icon: '🛍️',
+      'An online game retailer with a premium e-commerce experience — featuring product listings, filtering, cart flows, and a checkout process optimized for conversion.',
+    icon: '🎮',
     modalTitle: 'E-Commerce Design',
+    link: 'https://e-commerce-site-chi-teal.vercel.app/store',
   },
   {
     id: 'cs4',
