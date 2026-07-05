@@ -29,7 +29,7 @@ const caseStudies = [
       'An online game retailer with a premium e-commerce experience — featuring product listings, filtering, cart flows, and a checkout process optimized for conversion.',
     icon: '🎮',
     modalTitle: 'E-Commerce Design',
-    link: 'https://e-commerce-site-chi-teal.vercel.app/store',
+    link: 'https://e-commerce-site-chi-teal.vercel.app',
   },
   {
     id: 'cs4',
