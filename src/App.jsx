@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import InteractiveBackground from './InteractiveBackground'
 import meridianImg from './assets/Meridian_Watch_Co.png'
 import aspirationsImg from './assets/Aspirations_3.png'
 import ezgamesImg from './assets/EZGames.png'
@@ -109,6 +110,7 @@ export default function App() {
 
   return (
     <>
+      <InteractiveBackground />
       <nav
         className="portfolio-nav"
         style={navScrolled ? { borderBottomColor: 'var(--border-hi)' } : {}}

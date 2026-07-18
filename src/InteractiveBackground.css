@@ -1,0 +1,40 @@
+.interactive-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: grid;
+  /* 60px size */
+  grid-template-columns: repeat(auto-fill, 60px);
+  grid-template-rows: repeat(auto-fill, 60px);
+  overflow: hidden;
+  background-color: var(--bg);
+}
+
+.interactive-square {
+  width: 60px;
+  height: 60px;
+  /* Replicate the static grid lines */
+  border-right: 1px solid oklch(25% 0.008 30 / 0.15);
+  border-bottom: 1px solid oklch(25% 0.008 30 / 0.25);
+  background-color: transparent;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, background-color, box-shadow;
+}
+
+/* Add top and left borders to the first row/column if needed, 
+   but since it's an infinite-like grid, the standard right/bottom is fine */
+
+.interactive-square:hover {
+  transform: translateY(-4px) scale(1.05);
+  background-color: var(--surface-2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--border-hi);
+  /* Place hovered element above adjacent elements */
+  z-index: 2; 
+  position: relative;
+  /* Slightly curve the edges for a polished look when elevated */
+  border-radius: 4px;
+}
