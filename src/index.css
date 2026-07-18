@@ -34,6 +34,7 @@
   margin: 0;
   text-align: left;
   min-height: 100svh;
+  isolation: isolate;
 }
 
 body {
@@ -77,7 +78,7 @@ body {
 }
 
 .nav-link-custom {
-  color: var(--text-lo) !important;
+  color: var(--text-hi) !important;
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
@@ -793,4 +794,20 @@ body {
   .concepts-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* Let hover events pass through the full-width sections... */
+.portfolio-nav,
+.hero-section,
+.portfolio-section,
+.portfolio-footer {
+  pointer-events: none;
+}
+
+/* ...but keep them working for the actual content inside */
+.portfolio-nav .container,
+.hero-section .container,
+.portfolio-section .container,
+.portfolio-footer .container {
+  pointer-events: auto;
 }
