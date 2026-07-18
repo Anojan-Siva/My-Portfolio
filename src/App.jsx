@@ -33,12 +33,13 @@ const caseStudies = [
   },
   {
     id: 'cs4',
-    tag: 'Design 4 · Analytics',
-    title: 'SportsPulse Dashboard',
+    tag: 'Real Project · Analytics',
+    title: 'Ottawa Theft Trends',
     description:
-      'A data-rich sports analytics dashboard — featuring live stats, interactive visualizations, heat maps, and performance insights.',
+      'A data-rich analytics dashboard exploring theft trends in Ottawa — featuring interactive visualizations and insights.',
     icon: '📊',
     modalTitle: 'Analytics Dashboard Design',
+    link: 'https://dashboard-site-green.vercel.app',
   },
 ]
 
