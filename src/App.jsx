@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react'
+import meridianImg from './assets/Meridian_Watch_Co.png'
+import aspirationsImg from './assets/Aspirations_3.png'
+import ezgamesImg from './assets/EZGames.png'
+import ottawaTheftImg from './assets/Ottawa_Theft_Trends.png'
 
 const caseStudies = [
   {
@@ -7,7 +11,7 @@ const caseStudies = [
     title: 'Meridian Watch Co.',
     description:
       'A professional watch repair service website for Meridian Watch Co. — featuring service offerings, expertise showcase, and customer engagement optimized for a specialized service business.',
-    icon: '⌚',
+    image: meridianImg,
     modalTitle: 'Watch Repair Service Site',
     link: 'https://service-site-lilac.vercel.app',
   },
@@ -17,7 +21,7 @@ const caseStudies = [
     title: 'Aspirations 3',
     description:
       'A memorize the path and then follow the path game — exploring playful UI patterns, interaction states, scoring systems, and accessible game mechanics.',
-    icon: '🎮',
+    image: aspirationsImg,
     modalTitle: 'Memory Game Project',
     link: 'https://memory-game-livid-five-36.vercel.app',
   },
@@ -27,7 +31,7 @@ const caseStudies = [
     title: 'EZGames',
     description:
       'An online game retailer with a premium e-commerce experience — featuring product listings, filtering, cart flows, and a checkout process optimized for conversion.',
-    icon: '🎮',
+    image: ezgamesImg,
     modalTitle: 'E-Commerce Design',
     link: 'https://e-commerce-site-chi-teal.vercel.app',
   },
@@ -37,7 +41,7 @@ const caseStudies = [
     title: 'Ottawa Theft Trends',
     description:
       'A data-rich analytics dashboard exploring theft trends in Ottawa — featuring interactive visualizations and insights.',
-    icon: '📊',
+    image: ottawaTheftImg,
     modalTitle: 'Analytics Dashboard Design',
     link: 'https://dashboard-site-green.vercel.app',
   },
@@ -338,11 +342,7 @@ export default function App() {
               >
                 <div className="case-entry-inner">
                   <div className="case-img-area">
-                    <div className={`case-img-placeholder case-ph-${idx + 1}`}>
-                      <span role="img" aria-label={study.title} style={{ fontSize: '3rem' }}>
-                        {study.icon}
-                      </span>
-                    </div>
+                    <img src={study.image} alt={`${study.title} preview`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="case-num">Project {(idx + 1).toString().padStart(2, '0')}</div>
                   <h3 className="case-title">{study.title}</h3>
